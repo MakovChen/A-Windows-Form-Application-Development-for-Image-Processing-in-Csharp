@@ -16,23 +16,51 @@
     - [EmguCV]()
 - [影像處理]()
     - [影像形態學]()
+        - 資料類型
+        - 特徵工程
     - [物件辨識/語意分割]()
     - [系統架構設計]()
 
 ## 開發工具
 ### Visual Studio
 Visual Studio是Microsoft提供的程式編譯IDE，並以完善的開發工具著名。就以本次要開發的GUI為例，其就提供了拖拉式介面幫助我們編輯GUI的版型，並根據這個版型生成程式碼模板，使我們只要在每個物件寫上客製化的功能就能夠完成開發，減少很多不必要的開發時程。
-![](https://i.imgur.com/7dFN5H7.png)
-*紅色區塊為對應到視窗程序的程式碼*
+*/紅色區塊為對應到視窗程序的程式碼*
 ### C#(C-sharp)
 C#則是基於Windows系統衍伸的程式語言(也就是說它在windows上的執行效率最高)，而其也在繼承了C和C++優點的同時去掉了一些複雜繁瑣的功能，幫助我們更快地編輯所需實現的功能。
 
 ### EmguCV
 EmguCV是一個基於OpenCV且支援$.$NET Framework的影像處理模組，可以直接使用`NuGet`第三方管理工具來獲取所需的套件。
-![](https://i.imgur.com/56i3GUN.png)
-*[專案]>[管理NuGet套件(N)]*
+*/[專案]>[管理NuGet套件(N)]*
 
 ## 影像處理
 ### 影像形態學
+* **資料類型**
+    * **灰階(Gray)**：將每個向素的RGB值轉換為單通道。
+    * **二元(Binary)**：將灰階影像中的像素值根據特定的閥值轉化為0或1。
+    * **RGB(Single Channel)**：每個獨立通道的數值，以灰階形式呈現。
+    * **RGB(Filter)**：透過遮罩去除某些顏色，形狀與通道與原始圖片仍相同。
+    ![](https://i.imgur.com/RqBa7Ej.png)
+    *註：Emgu.CV.Capture _capture = new Emgu.CV.Capture()*
+
+* **基礎特徵**
+    * 幾何變換：缩放、平移、旋转、转置、镜像和重映射
+    * 侵蝕與膨脹：
+    ![](https://i.imgur.com/r5xySR9.png)
+    * 去噪濾波：中值、高斯、均值、方框、雙邊
+    * 非局部去噪
+    * 彩色模糊
+    * 離散餘弦變換DCT濾波
+    * 閾值濾波
+
+* **分析眼算法**
+    * 邊緣查找
+    * 背景分割BgSegm
+    * 影像穩定VideoStab
+
+* **分析眼算法**
+    * Histogram Equalization
+    * Neighborhood Processing
+    * Blur
+* **演算法**
 ### 物件辨識/語意分割
 ### 系統架構設計
