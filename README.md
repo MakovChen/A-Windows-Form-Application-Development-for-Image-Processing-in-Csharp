@@ -1,1 +1,1 @@
-# Develop-a-Windows-Form-GUI-for-Image-Processing-in-C-
+# Develop-a-Windows-Form-GUI-for-Image-Processing-in-Csharp
