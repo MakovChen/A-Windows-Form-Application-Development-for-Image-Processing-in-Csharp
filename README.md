@@ -1,5 +1,4 @@
 # 自動化光學檢測之Windows Form (C#)釋例
-![](https://i.imgur.com/L5etTi2.png)
 
 針對未來打算從事或即將從事半導體及電子相關科技產業的IT人員，GUI的開發能力可以說是一項非常重要的基本功。無論過去在學校研究的是**機電控制**、**自動化** 或者是**機器學習(ML)**，這些理論的應用倘若要在企業的系統中實踐，都需要仰賴*與企業資訊系統的高度整合*。
 
@@ -34,34 +33,4 @@ EmguCV是一個基於OpenCV且支援$.$NET Framework的影像處理模組，可�
 */[專案]>[管理NuGet套件(N)]*
 
 ## 影像處理
-### 影像形態學
-* **資料類型**
-    * **灰階(Gray)**：將每個向素的RGB值轉換為單通道。
-    * **二元(Binary)**：將灰階影像中的像素值根據特定的閥值轉化為0或1。
-    * **RGB(Single Channel)**：每個獨立通道的數值，以灰階形式呈現。
-    * **RGB(Filter)**：透過遮罩去除某些顏色，形狀與通道與原始圖片仍相同。
-    ![](https://i.imgur.com/RqBa7Ej.png)
-    *註：Emgu.CV.Capture _capture = new Emgu.CV.Capture()*
 
-* **基礎特徵**
-    * 幾何變換：缩放、平移、旋转、转置、镜像和重映射
-    * 侵蝕與膨脹：
-    ![](https://i.imgur.com/r5xySR9.png)
-    * 去噪濾波：中值、高斯、均值、方框、雙邊
-    * 非局部去噪
-    * 彩色模糊
-    * 離散餘弦變換DCT濾波
-    * 閾值濾波
-
-* **分析眼算法**
-    * 邊緣查找
-    * 背景分割BgSegm
-    * 影像穩定VideoStab
-
-* **分析眼算法**
-    * Histogram Equalization
-    * Neighborhood Processing
-    * Blur
-* **演算法**
-### 物件辨識/語意分割
-### 系統架構設計
